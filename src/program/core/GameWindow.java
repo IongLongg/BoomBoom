@@ -1,5 +1,7 @@
 package program.core;
 
+import program.maps.Map;
+
 import javax.swing.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
@@ -16,6 +18,7 @@ public class GameWindow extends JFrame {
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setResizable(false);
         this.setLocation(80,50);
+
 
 
         this.addKeyListener(new KeyAdapter() {

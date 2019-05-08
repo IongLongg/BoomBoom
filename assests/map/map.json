@@ -1,0 +1,39 @@
+{ "height":11,
+ "infinite":false,
+ "layers":[
+        {
+         "data":[0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 0, 1, 2, 1, 2, 1, 2, 1, 2, 1, 0, 0, 0, 3, 0, 3, 0, 3, 0, 3, 0, 0, 0, 2, 1, 2, 1, 2, 1, 2, 1, 2, 0, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 0, 1, 2, 1, 2, 1, 2, 1, 2, 1, 0, 0, 0, 3, 0, 3, 0, 3, 0, 3, 0, 0, 0, 2, 1, 2, 1, 2, 1, 2, 1, 2, 0, 0, 3, 0, 3, 0, 3, 0, 3, 0, 3, 0, 0, 1, 2, 1, 2, 1, 2, 1, 2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+         "height":11,
+         "id":1,
+         "name":"Tile Layer 1",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":11,
+         "x":0,
+         "y":0
+        }],
+ "nextlayerid":2,
+ "nextobjectid":1,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"1.2.3",
+ "tileheight":45,
+ "tilesets":[
+        {
+         "firstgid":1,
+         "source":"..\/..\/box\/box1.tsx"
+        }, 
+        {
+         "firstgid":2,
+         "source":"..\/..\/box\/wood.tsx"
+        }, 
+        {
+         "firstgid":3,
+         "source":"shawdow1.tsx"
+        }],
+ "tilewidth":45,
+ "type":"map",
+ "version":1.2,
+ "width":11
+}

@@ -3,6 +3,8 @@ package program.player;
 import program.Settings;
 import program.core.GameObject;
 import program.core.GameWindow;
+import program.maps.Box;
+import program.physics.BoxCollider;
 import program.renderer.SingleImageRenderer;
 import tklibs.Mathx;
 
@@ -10,6 +12,7 @@ public class Bomber extends GameObject {
     public Bomber() {
         renderer = new SingleImageRenderer("assests/image/Boom/Bomber/bomber_right.png");
         position.set(0,0);
+        hitBox = new BoxCollider(this, Settings.PLAYER_WIDTH, Settings.PLAYER_HEIGHT);
     }
 
     public void run() {
@@ -17,6 +20,14 @@ public class Bomber extends GameObject {
         this.move();
         this.fire();
         this.limitPosition();
+        this.intersectsBox();
+    }
+
+    private void intersectsBox() {
+        Box box = GameObject.findIntersects(Box.class, this.hitBox);
+        if (box != null) {
+            this.velocity.set(0, 0);
+        }
     }
 
     public void fire() {

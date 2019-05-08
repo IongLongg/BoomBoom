@@ -13,4 +13,7 @@ public class Settings {
 
     public static int BOOM_RATE = 10;
     public static int BOOM_TIMER = 0;
+
+    public static final int TILE_WIDTH = 45;
+    public static final int TILE_HEIGHT = 45;
 }

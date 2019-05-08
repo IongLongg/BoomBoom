@@ -1,6 +1,7 @@
 package program;
 
 import program.core.GameObject;
+import program.physics.BoxCollider;
 import program.renderer.SingleImageRenderer;
 
 public class Background extends GameObject {

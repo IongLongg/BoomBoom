@@ -1,0 +1,34 @@
+package program.maps;
+
+import com.google.gson.Gson;
+import program.utlis.Utils;
+
+import javax.swing.*;
+import java.util.List;
+
+public class Map {
+    private List<Layer> layers;
+
+    @Override
+    public String toString() {
+        return "Map{" +
+                "layers=" + layers +
+                '}';
+    }
+
+    public void generate() {
+        //:Todo Nhieu layer
+        if (layers.size() > 0) {
+            for (int i = 0; i < layers.size(); i++) {
+                Layer layer = layers.get(i);
+                layer.generate();
+            }
+        }
+    }
+
+    public static Map load(String url) {
+        String mapContent = Utils.readTextFile(url);
+        Gson gson = new Gson();
+        return gson.fromJson(mapContent, Map.class);
+    }
+}

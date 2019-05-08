@@ -1,6 +1,8 @@
 package program.core;
 
 import program.Background;
+import program.maps.Box;
+import program.maps.Map;
 import program.player.Bomber;
 import program.player.Bomb;
 
@@ -11,14 +13,19 @@ public class GamePanel extends JPanel {
     Background background;
     Bomber bomber;
     Bomb bomb;
-    TileLayer layer;
 
     public GamePanel() {
         background = new Background();
         bomber = new Bomber();
         bomb = new Bomb();
-        layer = TileLayer.FromFile("map.txt");
+        addMap();
     }
+
+    private void addMap() {
+        Map map = Map.load("assests/map/map.json");
+        map.generate();
+    }
+
 
     @Override
     public void paint(Graphics g) {

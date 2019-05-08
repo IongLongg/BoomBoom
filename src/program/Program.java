@@ -1,7 +1,11 @@
 package program;
 
+import com.google.gson.Gson;
 import program.core.GamePanel;
 import program.core.GameWindow;
+import program.maps.Layer;
+import program.maps.Map;
+import program.utlis.Utils;
 
 import java.awt.*;
 
@@ -16,5 +20,7 @@ public class Program {
         window.setVisible(true);
 
         panel.gameLoop();
+//        System.out.println(Utils.readTextFile("assests/map/map.json"));
+
     }
 }
