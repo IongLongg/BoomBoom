@@ -1,7 +1,5 @@
 package program.maps;
 
-import javafx.application.Platform;
-import program.Background;
 import program.core.GameObject;
 
 import java.util.List;
@@ -21,24 +19,46 @@ public class Layer {
     }
 
     public void generate() {
-        for (int tileY = 0; tileY < height; tileY++) {
-            for (int tileX = 0; tileX < width; tileX++) {
+        for(int tileY = 0; tileY < height; tileY++) {
+            for(int tileX = 0; tileX < width; tileX++) {
                 int mapData = data.get(tileY * width + tileX);
 
-                if (mapData == 1) {
+                if(mapData == 1) {
                     Box box = new Box();
                     box.position.set(tileX * 45, tileY * 45);
-                    GameObject.objects.add(box);
+                    GameObject.mapLayers.add(box);
                 }
-                if (mapData == 2) {
+
+                if(mapData == 3) {
                     Wood wood = new Wood();
                     wood.position.set(tileX * 45, tileY * 45);
-                    GameObject.objects.add(wood);
                 }
-                if (mapData == 3) {
+//                if(mapData == 2) {
+//                    Wood wood = new Wood();
+//                    wood.position.set(tileX * 45, tileY * 45);
+//                    GameObject.mapLayers.add(wood);
+//                }
+
+                if(mapData == 2) {
                     Shadow shadow = new Shadow();
                     shadow.position.set(tileX * 45, tileY * 45);
-                    GameObject.objects.add(shadow);
+                    GameObject.mapLayers.add(shadow);
+                }
+
+//                if (mapData == 4) {
+//                    ItemBoom itemBoom = new ItemBoom();
+//                    itemBoom.position.set(tileX * 45, tileY * 45);
+//                    GameObject.mapLayers.add(itemBoom);
+//                }
+                if (mapData == 6) {
+                    ItemShoes itemShoes = new ItemShoes();
+                    itemShoes.position.set(tileX * 45, tileY * 45);
+                    GameObject.mapLayers.add(itemShoes);
+                }
+                if (mapData == 5) {
+                    ItemBoomSize itemBoomSize = new ItemBoomSize();
+                    itemBoomSize.position.set(tileX * 45, tileY * 45);
+                    GameObject.mapLayers.add(itemBoomSize);
                 }
             }
         }

@@ -1,7 +1,5 @@
 package program.core;
 
-import program.maps.Map;
-
 import javax.swing.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
@@ -12,18 +10,18 @@ public class GameWindow extends JFrame {
     public static boolean isDownPress;
     public static boolean isLeftPress;
     public static boolean isFirePress;
+    public static boolean isAnyKeyPress;
 
     public GameWindow() {
-        this.setTitle("Boom");
+        this.setTitle("Boom OFFLINE");
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         this.setResizable(false);
-        this.setLocation(80,50);
-
-
+        this.setLocation(300,50);
 
         this.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
+                isAnyKeyPress = true;
                 if(e.getKeyCode() == KeyEvent.VK_W) {
                     isUpPress = true;
                 }
@@ -43,6 +41,8 @@ public class GameWindow extends JFrame {
 
             @Override
             public void keyReleased(KeyEvent e) {
+                isAnyKeyPress = false;
+
                 if (e.getKeyCode() == KeyEvent.VK_W) {
                     isUpPress = false;
                 }

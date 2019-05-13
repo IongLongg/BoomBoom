@@ -6,7 +6,11 @@ import program.renderer.SingleImageRenderer;
 
 public class Shadow extends GameObject {
     public Shadow() {
-        hitBox = new BoxCollider(this, 45, 22);
-        renderer = new SingleImageRenderer("assests/image/Boom/Box/shawdow1.png");
+        GameObject.shadowLayers.add(this);
+        hp = 1;
+        anchor.set(0, 0);
+        hitBox = new BoxCollider(this, 0, 0);
+        renderer = new SingleImageRenderer("assests/image/map/box/shawdow1.png");
     }
+
 }

@@ -1,9 +1,8 @@
 package program.maps;
 
 import com.google.gson.Gson;
-import program.utlis.Utils;
+import tklibs.Utils;
 
-import javax.swing.*;
 import java.util.List;
 
 public class Map {
@@ -17,9 +16,8 @@ public class Map {
     }
 
     public void generate() {
-        //:Todo Nhieu layer
-        if (layers.size() > 0) {
-            for (int i = 0; i < layers.size(); i++) {
+        if(layers.size() > 0) {
+            for(int i = 0; i < layers.size(); i++) {
                 Layer layer = layers.get(i);
                 layer.generate();
             }

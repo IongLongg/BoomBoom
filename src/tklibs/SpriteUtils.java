@@ -84,6 +84,5 @@ public class SpriteUtils {
                 return -o1.compareTo(o2);
             }
         });
-        System.out.println(strings);
     }
 }
